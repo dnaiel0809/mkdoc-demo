@@ -1,0 +1,32 @@
+site_name: My Docs
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      # primary: green
+    - scheme : default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      pygments_lang_class: true
+      line_spans: __span
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+extra:
+  generator: false
