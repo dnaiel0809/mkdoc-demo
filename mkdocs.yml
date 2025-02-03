@@ -8,13 +8,13 @@ theme:
   name: material
   palette:
 
-     # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-      primary: white
-      accent: blue
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+    #  # Palette toggle for automatic mode
+    # - media: "(prefers-color-scheme)"
+    #   primary: white
+    #   accent: blue
+    #   toggle:
+    #     icon: material/weather-sunny
+    #     name: Switch to light mode
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
