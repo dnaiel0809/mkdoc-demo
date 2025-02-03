@@ -1,0 +1,7 @@
+# Introduction
+
+StarkNet stands out among emerging rollups for its use of a specialized programming language called Cairo. While this unique approach paves the way for innovative solutions, it also comes with the challenge of limited ecosystem support for decentralized applications (DApps). Because StarkNet is not EVM-compatible, many existing applications require significant adjustments to function seamlessly on this platform. To address these limitations, various contributors are working on vital developer-focused toolsets, thereby improving DApp migration and usability within the StarkNet ecosystem.
+
+Meanwhile, World ID tackles a major concern in the cryptocurrency space: confirming that online participants are genuinely distinct individuals. The relatively anonymous nature of the internet and blockchain technology can foster malicious activities like Sybil attacks, phishing attempts, and automated bot trading. A global proof of personhood—executed with privacy-preserving zero-knowledge proofs—can help ensure genuine engagement while safeguarding user identities and personal information.
+
+Building a World ID state bridge on EVM-compatible chains can be comparatively straightforward. However, transitioning these functionalities to StarkNet poses its own set of complexities. By adapting and rethinking core structures for Cairo, project teams have an opportunity to pioneer interoperability and unlock new possibilities within the StarkNet ecosystem.

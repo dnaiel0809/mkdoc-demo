@@ -1,19 +1,73 @@
-site_name: My Docs
+site_name: StarkNet World Coin Bridge
+repo_name: NethermindEth/starknet-worldcoin-bridge
+repo_url: https://github.com/NethermindEth/starknet-worldcoin-bridge/tree/main
 theme:
+  logo: img/starknet_logo.svg
+  favicon: img/starnet_icon.ico
+  custom_dir: overrides
   name: material
   palette:
-    - scheme: slate
+
+     # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: white
+      accent: blue
       toggle:
         icon: material/weather-sunny
-        name: Dark mode
-      # primary: green
-    - scheme : default
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: white
+      accent: blue
+      scheme: default 
       toggle:
         icon: material/weather-night
-        name: Light mode
-      
+        name: Switch to dark mode
+
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: black
+      accent: blue
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to system preference
+
+  features:
+    - header.autohide
+    - navigation.path
+    - navigation.tracking
+    - navigation.instant
+    - navigation.instant.prefetch
+    # - navigation.tabs
+    - navigation.sections
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - announce.dismiss
+    - content.code.copy
+
+nav:
+  - Introduction: 
+    - What is Starknet Woldcoin bridge? : \Introduction 
+    - Why Starknet Woldcoin bridge? : \ExistingToolchains
+  - Getting Started:
+    - Setting up your environment: \
+    - Installation: \example 
+    - building your bridge: \example 
+  
+
 markdown_extensions:
   - attr_list
+  - footnotes
+  - md_in_html 
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -28,5 +82,9 @@ markdown_extensions:
       alternate_style: true
   - admonition
   - pymdownx.details
+
 extra:
   generator: false
+
+extra_css:
+  - stylesheets/extra.css

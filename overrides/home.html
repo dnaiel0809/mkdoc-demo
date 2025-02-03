@@ -1,0 +1,202 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+{{ super() }}
+
+<head>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+</head>
+<style>
+    
+    /* Hero Section Styling */
+    .hero-section {
+        position: relative;
+        min-height: calc(100vh - 120px);
+        /*    background: linear-gradient(-45deg, #2C3E50, #4CA1AF, #2980B9, #8E44AD); */
+        /* background: linear-gradient(135deg, #ffffff, #ffffff); */
+        background-size: 300% 300%;
+        animation: gradient 20s ease infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin-bottom: -42px;
+    }
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+    }
+
+
+    .hero-text {
+        flex: 1;
+        text-align: center;
+        padding-right: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+        margin: 1rem;
+        /* color: gray; */
+        font-weight: 700;
+        /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
+        animation: fadeInUp 1s ease;
+    }
+
+    .hero-text p {
+        font-size: 1.25rem;
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+        /* color: rgba(255, 255, 255, 0.9); */
+        animation: fadeInUp 1s ease 0.2s;
+    }
+
+    .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .btn {
+        position: relative;
+        background: #fff;
+        border: 1px solid;
+        border-radius: 0.2rem;
+        padding: 12px 24px;
+        display: inline-block;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        width: auto;
+        text-align: center;
+        color: #333;
+        transform: skew(0deg);
+        overflow: hidden;
+        text-decoration: none;
+        white-space: nowrap;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .btn span {
+        display: inline-block;
+        transform: skew(0deg);
+    }
+
+    .btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        /* right: 100%; */
+        left: 0;
+        background: rgb(10, 10, 10);
+        opacity: 0;
+        /* z-index: -1; */
+        transition: all 0.5s;
+    }
+
+    .btn:hover {
+        color: #fff;
+    }
+
+    .btn:hover::before {
+        left: 0;
+        right: 0;
+        opacity: 1;
+    }
+
+    /* Adaptare pentru dark mode */
+    body[data-theme="dark"] .btn {
+        background: #333;
+        color: #fff;
+    }
+
+    body[data-theme="dark"] .btn::before {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Spatiu intre butoane */
+    .btn+.btn {
+        margin-left: 10px;
+    }
+
+
+    .hero-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        width: 100%;
+        flex-direction: row;
+        z-index: 2;
+    }
+
+    .bang {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        width: 100%;
+        flex-direction: row;
+        z-index: 2;
+    }
+
+    .code-block {
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+    }
+
+    pre code.hljs {        
+        padding-top: 2em;
+        padding-bottom: 2em;
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .code-block code {
+        font-size: 12px;
+        padding: 1rem;
+        border-radius: 0.2rem;
+    }
+</style>
+
+
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="bang">
+                <img src="img/starknet_logo.svg" alt="Stark" width="50" height="50" draggable="false">
+                <h1>Worldcoin Stark Bridge</h1>
+                <img src="img/worldcoin_logo.svg" alt="Stark" width="50" height="50" draggable="false">
+            </div>
+            <p>Setup your bridge</p>
+            <div class="code-block">
+                <pre>
+                    <code>git clone https://github.com/NethermindEth/starknet-worldcoin-bridge.git</code>
+                </pre>
+            </div>
+            <a href="example" class="btn"><span>Docs</span></a>
+            <a href="https://github.com/NethermindEth/starknet-worldcoin-bridge/tree/main" class="btn"><span>Github</span></a>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</section>
+
+{% endblock %}
+{% block content %}{% endblock %}
